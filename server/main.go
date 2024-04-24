@@ -17,7 +17,7 @@ type server struct {
 
 func (*server) ListFiles(ctx context.Context, req *pb.ListFilesRequest) (*pb.ListFilesResponse, error) {
 	fmt.Println("ListFiles function was invoked with request: ", req)
-	dir := "/Users/hiroshi.tokudomi/grpc-golang/storage/name.txt"
+	dir := "../storage/name.txt"
 
 	paths, err := os.ReadDir(dir)
 	if err != nil {
